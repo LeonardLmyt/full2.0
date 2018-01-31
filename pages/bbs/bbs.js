@@ -29,7 +29,7 @@ Page({
       s_y: 0
     }
   },
-  onLoad: function () {
+  onLoad:function(){
     let that = this
     if (that.data.fid === "") {
       wx.request({
@@ -48,7 +48,6 @@ Page({
             pagecache.push({ load: false, num: 1, loadover: false })
             forum_data.push([])
           })
-          wx.setStorageSync('fids', res.data.top_list)
           that.setData({
             topTabItems: res.data.top_list,
             scrollTop: scrollTop,
@@ -65,7 +64,7 @@ Page({
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          swiperHeight: res.windowHeight - (res.windowWidth / 750 * 86),
+          swiperHeight: res.windowHeight - (res.windowWidth / 750 * 100),
           windowHeight: res.windowHeight
         });
       }
@@ -73,7 +72,7 @@ Page({
   },
   tabFun: function (e) {
     var that = this,
-      num = e.currentTarget.dataset.id
+    num = e.currentTarget.dataset.id
     if (this.data.currentTab === e.target.dataset.current) {
       that.setData({
         actType: e.target.dataset.acttype,
@@ -97,13 +96,10 @@ Page({
   },
   bindChange: function (e) {
     var that = this,
-      //num = e.currentTarget.dataset.id
-      num = e.detail.current
+      num = e.currentTarget.dataset.id
     that.setData({
       currentTab: e.detail.current
     })
-    var fids = wx.getStorageSync('fids')
-    that.getList(fids[num].fid, 1, false)
   },
   getList: function (fid, page, loadover) { //加载数据
     var that = this
@@ -116,8 +112,8 @@ Page({
         method: "GET",
         header: { 'Accept': 'application/json' },
         success: function (res) {
-          console.log("rrrrrrrr")
-          console.log(res)
+            console.log("rrrrrrrr")
+            console.log(res)
           let num = that.data.currentTab
           that.data.pagecache[num].num += 1
           that.data.forum_data[num].push(...res.data.forum_list.data)
@@ -151,7 +147,7 @@ Page({
   },
   scroll: function (e) {
     let that = this
-    setTimeout(function () { that.ani(e) }, 0)
+    setTimeout(function () { that.ani(e)},0)
   },
   ani: function (e) {
     let that = this
@@ -171,16 +167,15 @@ Page({
     })
     that.data.loading.scrolltop = e.detail.scrollTop
   },
-  // 下拉加载更多的功能暂时屏蔽掉
-  // touchstart: function (e) {
-  //   let that = this
-  //   that.data.loading.s_y = e.changedTouches[0].pageY
-  // },
-  // touchend: function (e) {
-  //   let that = this
-  //   if (e.changedTouches[0].pageY - that.data.loading.s_y > 150 && !that.data.loading.scrolltop) {
-  //     util.showLoading();//加载新数据，乱序，无浏览过的数据
-  //     console.log('分类id' + e.currentTarget.dataset.fid)
-  //   }
-  // }
+  touchstart: function (e) {
+    let that = this
+    that.data.loading.s_y = e.changedTouches[0].pageY
+  },
+  touchend: function (e) {
+    let that = this
+    if (e.changedTouches[0].pageY - that.data.loading.s_y > 150 && !that.data.loading.scrolltop) {
+      util.showLoading();//加载新数据，乱序，无浏览过的数据
+      console.log('分类id' + e.currentTarget.dataset.fid)
+    }
+  }
 })
