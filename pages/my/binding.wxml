@@ -1,0 +1,17 @@
+<form bindsubmit="formSubmit">
+  <view class="logo">
+    <image src="/images/Binding_page_logo.png"></image>
+  </view>
+  <view class="form">
+    <view class="form_sub">
+      <image src="/images/icon_user_name.png"></image>
+      <input placeholder='用户名' placeholder-class="input_class" name="username"></input>
+    </view>
+    <view class="form_sub">
+      <image src="/images/icon_Ipassword.png"></image>
+      <input placeholder='密码' placeholder-class="input_class" name="password" type='{{pass[pass.show]}}' maxlength="14"></input>
+      <image class="invisible" src="/images/kan.png" data-show='{{pass.show}}' bindtap='switchPwd'></image>
+    </view>
+  </view>
+  <button class="submit" formType="submit">绑定</button>
+</form>

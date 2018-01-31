@@ -1,0 +1,4 @@
+.message{width: 92%;margin: 50rpx auto 0;height: 250rpx;}
+.placeholderclass{font-size: 26rpx;}
+
+.button-send{width:92%;height:88rpx;line-height:88rpx;background-color:#548FFB;border:none;color:#fff;margin-top:60rpx;}

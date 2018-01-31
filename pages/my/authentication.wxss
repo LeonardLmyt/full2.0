@@ -1,0 +1,21 @@
+page,.content{width: 100%;height: 100%;background-color: #F8F9FC;overflow: hidden;}
+.warning{width: 92%;overflow: hidden;margin: 20rpx auto 20rpx;color: #ff9a55;font-size: 24rpx;line-height: 32rpx;}
+.form{width: 100%;overflow: hidden;background-color: #fff;}
+.input_main{width: 92%;overflow: hidden;height: 110rpx;margin: 0 auto;display: -webkit-box;display:box;-webkit-box-align: center;box-align: center;}
+.input_main_title{width: 172rpx;font-size: 30rpx;color: #333333;}
+.input{-webkit-box-flex: 1.0;box-flex: 1.0;position: relative;}
+.input input{width: 100%;}
+.input_warning{position: absolute;color: red;right: 8%;top: 0;}
+.input_placeholder{font-size: 30rpx;color: #bbbbbb;}
+
+.button view{box-sizing: border-box;-webkit-box-sizing: border-box;width:172rpx;height: 65rpx;line-height: 63rpx;color: #ff6801;border: 2rpx solid #ff9433;text-align: center;border-radius: 10rpx;-webkit-border-radius: 10rpx;font-size: 27rpx;}
+.bgbutton view{color: #cfcfcf;border: 2rpx solid #cfcfcf;}
+
+.submit{width: 690rpx;border:0;color: #ffffff;background-color: #39c737;font-size: 36rpx;height: 98rpx;}
+.submit::after{content: none;}
+.ok{background-color: #558ffb !important;}
+.huo{display: -webkit-box;display: box;width: 100%;-webkit-box-pack:  center;box-pack:  center;font-size: 30rpx;color: #ddd;margin: 40rpx 0;}
+.huo :nth-child(1){width: 200rpx;background: #ddd;height: 1rpx;-webkit-box-sizing:  border-box;margin-top: 20rpx;margin-right: 50rpx;} 
+.huo :nth-child(3){width: 200rpx;background: #ddd;height: 1rpx;margin-left: 50rpx;margin-top: 20rpx;} 
+.bloady{width: 690rpx;height: 88rpx;background: #c7c7c7;color: #fff;font-size: 32rpx;}
+.next_buttom{width: 100%;height: auto;padding: 100rpx 0;}

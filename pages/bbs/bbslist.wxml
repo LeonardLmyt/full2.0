@@ -1,0 +1,42 @@
+<!-- 户外大厅 -->
+<swiper-item>
+  <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMore" scroll-top="{{!!scrollTop[tap]}}" data-fid="{{fid}}" bindscroll="scroll">
+    <view class='midden_lisy' wx:for="{{forum_data}}" wx:for-index="index">
+      <navigator url="/pages/index/index_detail?tid={{item.tid}}">
+        <view class='Written_content'>{{item.subject}}</view>
+        <view class='Written_img' wx:if="{{item.image[0].pic}}">
+          <image src="{{item.image[0].pic}}" mode="aspectFill"></image>
+        </view>
+        <view wx:else></view>
+        <view class="li-infox">
+          <view class='all_count'>
+            <view class='browse'>
+              <view class='icon_name'>
+                <view class="icon-viewsx">
+                  <view class="li-info">
+                    <view class="icon-user">每日一图</view>
+                    <view class="icon-views">{{item.views}}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view class="weui-loadmore" hidden="{{pagecache}}">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <view class="weui-loadmore" hidden='{{!pagecache}}'>
+      <view class="weui-loadmore__tips">加载完成</view>
+    </view>
+  </scroll-view>
+</swiper-item>
+
+<view class='post_tow'>
+  <image class='top_img' bindtap='goTop' src='/images/float_zhiding.png'></image>
+  <navigator url='/pages/cate/post'>
+    <image src='/images/float_fatie.png'></image>
+  </navigator>
+</view>

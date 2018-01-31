@@ -1,0 +1,13 @@
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" >
+<import src="../common/incList.wxml" />
+<scroll-view class="scrollView" scroll-y bindscrolltolower="loadMoreData" style="height: {{swiperHeight}}px" bindscroll="scroll" scroll-top="{{loading.scrolltop}}" bindtouchstart='touchstart' bindtouchend='touchend'>
+  <view wx:for="{{hotDataList}}" wx:key="">
+    <template is="incList" data="{{item}}" />
+  </view>
+</scroll-view>
+<view wx:if="{{goTop.locking}}" class='post_tow {{goTop.show ? "post_tow_animation" : "post_tow_animation1"}}'>
+  <image bindtap='goTop' src='/images/float_zhiding.png'></image>
+</view>
+<import src="../../libs/public/public.wxml" />
+<template is="footer" />
+</scroll-view>

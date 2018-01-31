@@ -1,0 +1,34 @@
+<!-- item.wxml -->
+<template name="footer">
+  <view style='width:100%;height:100rpx;'></view>
+  <view class="footer">
+    <view class="footer_sub">
+      <navigator url="/pages/index/index" open-type='redirect' class="footer_tab">
+        <view></view>
+        <view>首页</view>
+      </navigator>
+      <navigator url="/pages/bbs/bbs" open-type='redirect' class="footer_tab">
+        <view></view>
+        <view>社区</view>
+      </navigator>
+      <navigator url="/pages/video/video" open-type='redirect' class="footer_tab">
+        <view></view>
+        <view>视频</view>
+      </navigator>
+      <navigator url="/pages/my/my" open-type='redirect' class="footer_tab">
+        <view></view>
+        <view>我的</view>
+      </navigator>
+    </view>
+  </view>
+</template>
+
+<template name="layer">
+  <view class="layer" hidden='{{layer.show}}'>
+    <view class="layer-sub">
+      <view class="layer-seat"></view>
+      <view class="layer-content {{layer.state}}">{{layer.content}}</view>
+      <view class="layer-seat"></view>
+    </view>
+  </view>
+</template>

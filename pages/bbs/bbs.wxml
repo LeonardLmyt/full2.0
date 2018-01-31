@@ -1,0 +1,129 @@
+<import src="../common/incList.wxml" />
+<block wx:if="{{isToLowerVersion}}">
+  <view style="display:flex;align-items:center;justify-content:center;position:fixed;width:100%;height:100%;padding:0 40rpx;box-sizing:border-box;text-align:center;">
+    <view>当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。</view>
+  </view>
+</block>
+<block wx:else>
+  <view class="navbar-fixed">
+    <scroll-view scroll-x="true" class="main-nav" scroll-left="{{scrollWidth}}">
+      <view class="slider-wrap">
+        <view class="item-cell {{currentTab == index ? 'selected' : ''}}" wx:for="{{topTabItems}}" wx:key="" data-id="{{index}}" data-fid="{{item.fid}}" bindtap="switchTab">{{item.name}}</view>
+      </view>
+    </scroll-view>
+    <navigator class="category-view" url="../cate/cate">
+      <view class="category-icon"></view>
+    </navigator>
+  </view>
+
+  <swiper class="swiper" current="{{currentTab}}" style="height: {{swiperHeight}}px" bindchange="bindChange" data-id='{{currentTab}}'>
+    <swiper-item wx:for="{{topTabItems}}" wx:key="" wx:for-index="tap">
+      <block>
+        <!-- <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMore" scroll-top="{{!!scrollTop[tap]}}" data-fid="{{item.fid}}" hidden='{{currentTab !== tap ? true : false}}' bindscroll="scroll" bindtouchstart='touchstart' bindtouchend='touchend'
+          style='height:{{swiperHeight}}px'>
+          <view class='midden_lisy' wx:for="{{forum_data[currentTab]}}" wx:for-index="index">
+            <navigator url="/pages/index/index_detail?tid={{item.tid}}">
+              <view class='Written_content'>{{item.subject}}</view>
+              <view class='Written_img' wx:if="{{item.image[0].pic}}">
+                <image src="{{item.image[0].pic}}" mode="aspectFill"></image>
+              </view>
+              <view wx:else></view>
+              <view class="li-infox">
+                <view class='all_count'>
+                  <view class='browse'>
+                    <view class='icon_name'>
+                      <view class="icon-viewsx">
+                        <view class="li-info">
+                          <view class="icon-user">{{item.author}}</view>
+                          <view class="icon-views">{{item.views}}</view>
+                        </view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+          </view>
+          <view class="weui-loadmore" hidden="{{pagecache[currentTab].loadover ? pagecache[currentTab].loadover : pagecache[currentTab].load}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+          </view>
+          <view class="weui-loadmore" hidden='{{!pagecache[currentTab].loadover}}'>
+            <view class="weui-loadmore__tips">加载完成</view>
+          </view>
+        </scroll-view> -->
+
+
+        <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMore" scroll-top="{{!!scrollTop[tap]}}" data-fid="{{item.fid}}" hidden='{{currentTab !== tap ? true : false}}' bindscroll="scroll" bindtouchstart='touchstart' bindtouchend='touchend'
+          style='height:{{swiperHeight}}px'>
+
+          <block wx:for="{{forum_data[currentTab]}}" wx:for-index="index">
+
+            <!--start-->
+            <navigator wx:if="{{item.image.length > 2}}" class="list-item" url="/pages/index/index_detail?tid={{item.tid}}">
+              <view class="item-detail">
+
+                <view class="li-title">{{item.subject}}</view>
+                <view class="li-img">
+                  <view wx:for="{{item.image}}" wx:for-item="itemimg" wx:key="" wx:if="{{index < 4}}" class="li-img__holder">
+                    <view class="li-imgratio--rect">
+                      <image src="{{itemimg.pic}}!xiaoindexw222h133" mode="aspectFill"></image>
+                    </view>
+                  </view>
+
+                </view>
+              </view>
+              <view class="li-info">
+                <view class="icon-user">{{item.author}}</view>
+                <view class="icon-views">{{item.views}}</view>
+              </view>
+            </navigator>
+
+            <navigator wx:if="{{item.image.length < 3 && item.image.length > 0}}" class="list-item" url="/pages/index/index_detail?tid={{item.tid}}">
+              <view class="flex-inline">
+                <view class="item-detail">
+                  <view class="li-title">{{item.subject}}</view>
+                  <view class="li-info">
+                    <view class="icon-user">{{item.author}}</view>
+                    <view class="icon-views">{{item.views}}</view>
+                  </view>
+                </view>
+                <view class="li-img__holder">
+                  <view class="li-imgratio--rect">
+                    <image src="{{item.image[0].pic}}!xiaoindexw222h133" mode="aspectFill"></image>
+                  </view>
+                </view>
+              </view>
+            </navigator>
+
+            <navigator wx:if="{{item.image.length==0}}" class="list-item" url="/pages/index/index_detail?tid=5464863">
+              <view class="item-detail">
+                <view class="li-title">{{item.subject}}</view>
+              </view>
+              <view class="li-info">
+                <view class="icon-user">{{item.author}}</view>
+                <view class="icon-views">{{item.views}}</view>
+              </view>
+            </navigator>
+            <!--end-->
+          </block>
+
+          <view class="weui-loadmore" hidden="{{pagecache[currentTab].loadover ? pagecache[currentTab].loadover : pagecache[currentTab].load}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+          </view>
+          <view class="weui-loadmore" hidden='{{!pagecache[currentTab].loadover}}'>
+            <view class="weui-loadmore__tips">加载完成</view>
+          </view>
+
+        </scroll-view>
+
+      </block>
+    </swiper-item>
+  </swiper>
+</block>
+<view wx:if="{{goTop.locking}}" class='post_tow {{goTop.show ? "post_tow_animation" : "post_tow_animation1"}}'>
+  <image bindtap='goTop' src='/images/float_zhiding.png'></image>
+</view>
+<import src="../../libs/public/public.wxml" />
+<template is="footer" />

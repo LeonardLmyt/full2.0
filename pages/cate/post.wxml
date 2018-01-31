@@ -1,0 +1,16 @@
+<form class="content" bindsubmit="formSubmit" bindreset="formReset" hidden='{{postShow}}'>
+  <view class="message_main">
+    <input placeholder="输入标题(最多40个字)" placeholder-style="color:#444;" value="{{title}}" bindinput='addTitle' maxlength="40" auto-focus='{{titlefocus}}' data-attr='title' bindfocus='focus' bindblur='blur'></input>
+    <view class="message">
+      <textarea placeholder='输入描述' auto-height placeholder-style="color:#aaaaaa;" maxlength="800" bindinput='addMessage' auto-focus='{{messagefocus}}' value="{{message}}" data-attr='textarea' bindfocus='focus' bindblur='blur' show-confirm-bar="{{false}}"></textarea>
+      <view class="input">{{messagenum}} / 800</view>
+    </view>
+  </view>
+  <view class="button">
+    <view class="submit" formType="submit" bindtap="publish">发表</view>
+    <view class="addImg" bindtap='addImg'>添加图片</view>
+  </view>
+</form>
+
+<import src="../../libs/public/public.wxml" />
+<template is="layer" data="{{layer}}" />

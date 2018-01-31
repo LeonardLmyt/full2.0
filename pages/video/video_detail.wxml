@@ -1,0 +1,93 @@
+<scroll-view class="article" bindscroll="scroll" scroll-y style="height: {{height}}px;" bindscrolltolower="ReachBottom" scroll-into-view="{{toView}}" scroll-top="{{scrolltop}}">
+    <view class="section">
+        <video id="myVideo" src="{{url}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+    </view>
+    <view class='send_sontent'>{{name}}</view>
+    <view class='text_contens'>
+        <view class='text_left'>{{view}}人学习</view>
+        <view class='text_right'>{{createtime}}</view>
+    </view>
+    <view class='all'>全部评论</view>
+    <view wx:for = "{{comment}}">
+    <view class="comment-item" id="id{{index}}">
+        <navigator class="comment-meta">
+            <view class="comment-author">
+                <image src="{{item.avatarurl}}" class="comment-author--avatar" mode="aspectFill"></image>
+                <view class="comment-author--name">{{item.nickname}}</view>
+            </view>
+        </navigator>
+        <view class="post-message">
+            {{item.contents}}
+        </view>
+        <view class="comment-time">
+            {{item.time}}
+        </view>
+    </view>
+    </view>
+
+
+
+
+
+
+
+    <view style="width:100%;height:120rpx;"></view>
+    <view class="repl-fixed">
+        <block wx:if="{{isReply}}">
+            <form bindsubmit="addPost" name="addPost" report-submit>
+                <view class="repl-header">
+                    <view class="repl-header--close">关闭</view>
+                    <view class="repl-header--title">发表回复</view>
+                    <view class="repl-header--button">
+                        <button form-type="submit" class="button-send">发送</button>
+                    </view>
+                </view>
+                <view class="repl-ipt">
+                    <input cursor-spacing="40" auto-focus="{{replyFocus}}" class="message" placeholder="我也来说两句" bindblur='addMessage' value='{{message}}' name="message"></input>
+                </view>
+            </form>
+        </block>
+        <block wx:else>
+            <view class="place">
+                <navigator class="back" url='/pages/video/video'>
+                    <view class='ture'></view>
+                </navigator>
+                <view class="place-text" bindtap="switchInput">我也来说两句</view>
+                <view class="message_icon">
+                    <view class="message_icon_sub">
+                        <image src='/images/icon_comment_news.png'></image>
+                        <view class='shu' wx:if="{{!!postNum}}">
+                            <text>{{postNum}}</text>
+                        </view>
+                    </view>
+                    <view class="message_icon_sub" bindtap='addCollection'>
+                        <image src='{{collectionSrc[collectionSrc.show]}}'></image>
+                    </view>
+                    <button class="message_icon_sub" open-type="share" bindtap="onShareAppMessage">
+                        <image src='/images/icon_comment_share.png'></image>
+                    </button>
+                </view>
+            </view>
+        </block>
+    </view>
+    <view class='post_tow {{goTop.show ? "post_tow_animation" : "post_tow_animation1"}}' hidden='{{isReply}}'>
+        <navigator url='/pages/index/index'>
+            <image src='/images/zhuye.png '></image>
+        </navigator>
+        <image bindtap='goTop' src='/images/float_zhiding.png'></image>
+    </view>
+    <view class="collection {{collectionSrc.collection ? 'collection_animation' : ''}}">
+        <navigator url="/pages/my/collect" class="collection_sub">
+            <view class="collection_left">
+                收藏成功
+            </view>
+            <view class="collection_right">
+                查看 ▶
+            </view>
+        </navigator>
+    </view>
+</scroll-view>
+
+
+<import src="../../libs/public/public.wxml" />
+<template is="layer" data="{{layer}}" />

@@ -1,0 +1,13 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='big_warp'>
+        <view class='title' wx:if="{{!error}}">请填写您的用户名</view>
+        <view class='title_error' wx:else>该用户名已存在,请重新输入</view>
+        <view class='input'>
+            <view>用户名</view>
+            <input placeholder='微信昵称' bindinput='addName' auto-focus='{{true}}' name='username'></input>
+            <image src='/images/attestation_success.png' wx:if="{{!error}}"></image>
+            <image src='/images/attestation_error.png' wx:else></image>
+        </view>
+        <button class='over {{up_ok ? "over_ok" : ""}}'  formType="submit">完成</button>
+    </view>
+</form>

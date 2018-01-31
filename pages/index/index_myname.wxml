@@ -1,0 +1,52 @@
+<scroll-view scroll-y style="height: 600px;" bindscrolltolower="loadMore" bindscroll="scroll">
+  <view class="titie_img">
+    <view class='hader_all'>
+      <view class='head_portrait'>
+        <image style="width:80px; height:80px; border-radius:50%; overflow:hidden;" src='{{avatar}}'></image>
+      </view>
+      <text class='text_name'>{{author}}</text>
+    </view>
+    <view class="img_bg">
+      <image src="/images/img_per_bg.png"></image>
+    </view>
+  </view>
+  <view hidden="{{recordshow}}">
+    <view class="content" wx:if="{{!list.length}}">
+      <view class='my_last'>
+        <image src='/images/icon_per_No content.png'></image>
+      </view>
+      <view class='nocontent'>他没有发表过任何东西噢！</view>
+    </view>
+    <view class="content" wx:else>
+      <view class="con_title">TA的帖子</view>
+      <view class="content_sub" wx:for="{{list}}" bindtap="switchTab" wx:key="" data-id="{{index}}" data-fid="{{item.fid}}">
+        <view class="content_sub_left">
+          <view class="time">
+            <view>{{item.n}}</view>
+            <view>{{item.y}}</view>
+          </view>
+        </view>
+        <view class="content_sub_right">
+          <navigator class="content_title" url="/pages/index/index_detail?tid={{item.tid}}">
+            {{item.subject}}
+          </navigator>
+          <view class="content_sub_right_img">
+            <view wx:if="{{item.image[0].pic}}">
+              <image src='{{item.image[0].pic}}' mode="aspectFill"></image>
+            </view>
+          </view>
+          <view class="content_sub_right_buttom">
+            <text>{{item.name}}</text>
+            <view></view>
+            <text>{{item.views}}人浏览</text>
+          </view>
+          <view class="content_sub_icon"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+
+<import src="../../libs/public/public.wxml" />
+<template is="layer" data="{{layer}}" />

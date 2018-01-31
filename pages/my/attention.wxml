@@ -1,0 +1,48 @@
+<import src="../common/incList.wxml" />
+<block wx:if="{{isToLowerVersion}}">
+  <view style="display:flex;align-items:center;justify-content:center;position:fixed;width:100%;height:100%;padding:0 40rpx;box-sizing:border-box;text-align:center;">
+    <view>当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。</view>
+  </view>
+</block>
+<block wx:else>
+  <view class="navbar-fixed">
+    <scroll-view scroll-x="true" class="main-nav" scroll-left="{{scrollWidth}}">
+      <view class="slider-wrap">
+        <view class="item-cell {{currentTopItem == index ? 'selected' : ''}}" wx:for="{{topTabItems}}"  wx:key="" data-key="{{item.key}}" data-id="{{index}}" bindtap="switchTab">{{item.name}}</view>
+      </view>
+    </scroll-view>
+    
+  </view>
+
+  <swiper class="swiper" current="{{currentTopItem}}" style="height: {{swiperHeight}}px" bindchange="bindChange">
+
+    <!-- 我关注的人 -->
+    <swiper-item>
+      <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+        <view class='all_top' wx:for="{{attention_l}}" wx:for-index="index">
+          <view class='icon_all'>
+            <image src='/images/img_user.png '></image>
+          </view>
+          <view class='content-name'>{{item.fwusername}}</view>
+          <view class='not_attention' data-uid="{{item.uid}}" data-fwuid = "{{item.fwuid}}" data-fwusername="{{item.fwusername}}" bindtap='attention_tol' wx:if="{{item.mutual === 1}}">√ 已关注</view>
+          <view class='not_attention' data-uid="{{item.uid}}" data-fwuid = "{{item.fwuid}}" data-fwusername="{{item.fwusername}}" bindtap='attention_tol' wx:else>互相关注</view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData">
+
+        <!-- 关注我的人 -->
+        <view class='all_top' wx:for="{{attention_r}}" wx:for-index="index">
+          <view class='icon_all'>
+            <image src='/images/img_user.png '></image>
+          </view>
+          
+          <view class='content-name'>{{item.fwusername}}</view>
+          <view class='not_attentions' data-uid="{{item.uid}}" data-fwuid = "{{item.fwuid}}" data-fwusername="{{item.fwusername}}" bindtap='attention_tor'>+关注</view>
+        </view>
+        <!-- <view class='three'>3位驴友关注</view> -->
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</block>

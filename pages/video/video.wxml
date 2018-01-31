@@ -1,0 +1,23 @@
+<scroll-view scroll-y style="height: {{height}}px;" bindscrolltolower="loadMore" bindscroll="scroll" scroll-top="{{scrolltop}}">
+  <view wx:for="{{video_List}}" wx:for-index="index" class="content_sub">
+    <navigator url="/pages/video/video_detail?id={{item.id}}&url={{item.url}}&view={{item.view}}&name={{item.name}}&intro={{item.intro}}&createtime={{item.createtime}}">
+      <view class='section'>
+        <image src='{{item.img}}' mode='aspectFill'></image>
+        <view class='file'></view>
+        <view class="title_main">
+          <view>{{item.name}}</view>
+        </view>
+      </view>
+    </navigator>
+    <view class='text_contens'>
+      <text>{{item.view}}人观看</text>
+      <view></view>
+      <text>90秒</text>
+    </view>
+  </view>
+  <view wx:if="{{goTop.locking}}" class='post_tow {{goTop.show ? "post_tow_animation" : "post_tow_animation1"}}'>
+    <image bindtap='goTop' src='/images/float_zhiding.png'></image>
+  </view>
+</scroll-view>
+<import src="../../libs/public/public.wxml" />
+<template is="footer" />

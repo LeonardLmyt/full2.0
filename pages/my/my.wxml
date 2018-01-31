@@ -1,0 +1,48 @@
+<view class="titie_img">
+  <view class='hader_all'>
+    <view class='head_portrait'>
+      <image src='{{avatarurl}}'></image>
+    </view>
+    <text class='text_name'>{{nickname}}</text>
+    <navigator url="/pages/my/authentication"></navigator><button class="binding" open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber">{{is_bind}}</button>
+  </view>
+  <view class="img_bg">
+    <image src="/images/img_per_bg.png"></image>
+  </view>
+</view>
+<view class='big_listcontent'>
+  <view class='all_list'>
+    <view>
+      <navigator url='/pages/my/new' open-type='navigate'  class="all_list_sub">
+        <image src='/images/icon_per_news.png'></image>
+        <view class='new'>评论我的</view>
+      </navigator>
+    </view>
+    <view>
+      <navigator url='/pages/my/collect' class="all_list_sub">
+        <image src='/images/icon_my Collection.png'></image>
+        <view class='new'>我的收藏</view>
+      </navigator>
+    </view>
+    <!-- <view class='footmark'>
+      <navigator url='/pages/my/footmark'>
+        <image src='/images/icon_per_footprint.png'></image>
+        <view class='new'>足迹</view>
+      </navigator> 
+    </view> -->
+    <view>
+      <navigator url='/pages/my/mypost' class="all_list_sub">
+        <image src='/images/icon_per_follow.png'></image>
+        <view class='new'>我的帖子</view>
+      </navigator>
+    </view>
+    <view>
+      <navigator url='/pages/cate/post' class="all_list_sub">
+        <image src='/images/float_fatie.png'></image>
+        <view class='new'>发帖测试</view>
+      </navigator>
+    </view>    
+  </view>
+</view>
+<import src="../../libs/public/public.wxml" />
+<template is="footer" />

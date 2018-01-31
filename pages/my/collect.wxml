@@ -1,0 +1,36 @@
+<scroll-view scroll-y style="height:{{windowHeight}}px" bindscrolltolower="loadMore" bindscroll="scroll" hidden='{{recordshow}}'>
+  <view class="content" wx:if="{{!myfavorite.length}}">
+    <view class='my_last'>
+      <image src='/images/icon_per_No content.png '></image>
+    </view>
+    <view class='nocontent'>你没有发表过任何东西噢！</view>
+  </view>
+  <view class="content" wx:else>
+    <view class='midden_lisy' wx:for="{{myfavorite}}" wx:for-index="index" data-id='{{item.id}}' data-index='{{index}}'>
+      <navigator class="midden_lisy_sub" url='/pages/index/index_detail?tid={{item.id}}'>
+        <view class='Written_content'>{{item.title}}</view>
+        <view class='Written_img' wx:if="{{item.image[0].pic}}">
+          <image src="{{item.image[0].pic}}" mode="aspectFill"></image>
+        </view>
+        <view wx:else></view>
+        <view class="li-infox">
+          <view class='all_count'>
+            <view class='browse'>
+              <view class='icon_name'>
+                <view class="icon-viewsx">
+                  <view class="li-info">
+                    <view class="icon-user">{{item.author}}</view>
+                    <view class="icon-views">{{item.views}}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</scroll-view>
+
+<import src="../../libs/public/public.wxml" />
+<template is="layer" data="{{layer}}" />

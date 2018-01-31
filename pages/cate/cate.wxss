@@ -1,0 +1,29 @@
+.head_title{display: -webkit-box;display: box;width: 95%;padding: 20rpx;}
+.title{-webkit-box-flex: 1.0;}
+.edit{width: 100rpx;height: 60rpx;border-radius: 32rpx;-webkit-border-radius: 32rpx;border: 1px solid #4988FB;color: #4988FB;font-size: 30rpx;text-align: center;line-height: 60rpx;padding: 0 10rpx;}
+.my_label_sub{height: 30rpx;border-radius: 15rpx;text-align: center;padding: 30rpx;display:inline-block;margin-left: 20rpx;font-size: 26rpx;margin-bottom: 20rpx;background: #F4F4F4;color: #212121}
+.my_label_sub view{display:inline-block;
+width:30rpx;
+height:30rpx;
+line-height:15rpx;
+margin-right:10rpx;
+vertical-align:middle;
+font-size:40rpx;
+}
+.my_label_sub view[hidden] {display:none !important;}
+
+.all_label{display: inline-block;}
+.all_label_sub{display: inline-block;height: 30rpx;line-height: 30rpx;border-radius: 15rpx;text-align: center;padding: 30rpx;margin-left: 20rpx;font-size: 26rpx;margin-bottom: 20rpx;color: #212121;border: 1px solid #EEEEEE;}
+.all_label_sub view{display:inline-block;
+width:30rpx;
+height:30rpx;
+line-height:15rpx;
+margin-right:10rpx;
+vertical-align:middle;
+font-size:40rpx;
+}
+.all_label_sub view[hidden]{display: none !important;}
+.all_label_sub text{display:block;}
+
+
+.submit{position: fixed;bottom: 0;left: 0;width: 100%;color: white;background: #548FFB;border-radius: 0;-webkit-border-radius: 0; }

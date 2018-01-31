@@ -1,0 +1,68 @@
+<template name="incList">
+  <navigator class="list-item" url="/pages/index/index_detail?tid={{item.tid}}">
+    <block wx:if="{{item.imgList && item.imgList.length !== 0}}">
+      <block wx:if="{{item.fid == 39 || item.fid == 443 || (item.fid == 56 && item.typeid == 77)}}">
+        <view class="item-detail">
+          <view class="li-title">{{item.subject}}</view>
+          <view class="li-img">
+            <view class="li-imgratio--rect">
+              <image src="{{item.imgList[0]}}" mode="aspectFill"></image>
+            </view>
+          </view>
+        </view>
+        <view class="li-info">
+          <view class="icon-user">{{item.author}}</view>
+          <view class="icon-views">{{item.views}}</view>
+        </view>
+      </block>
+      <block wx:elif="{{item.imgList.length === 3}}">
+        <view class="item-detail">
+          <view class="li-title">{{item.subject}}</view>
+          <view class="li-img">
+            <view class="li-img__holder" wx:for="{{item.imgList}}" wx:key="">
+              <view wx:if="{{item.lenght > 0}}">
+                <view class="li-imgratio--rect">
+                  <image src="{{item}}" mode="aspectFill"></image>
+                </view>
+              </view>
+            </view>
+            <view class="li-img__holder" wx:for="{{item.imgList}}" wx:key="">
+              <view class="li-imgratio--rect">
+                <image src="{{item}}" mode="aspectFill"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="li-info">
+          <view class="icon-user">{{item.author}}</view>
+          <view class="icon-views">{{item.views}}</view>
+        </view>
+      </block>
+      <block wx:elif="{{item.imgList.length < 3}}">
+        <view class="flex-inline">
+          <view class="item-detail">
+            <view class="li-title">{{item.subject}}</view>
+            <view class="li-info">
+              <view class="icon-user">{{item.author}}</view>
+              <view class="icon-views">{{item.views}}</view>
+            </view>
+          </view>
+          <view class="li-img__holder">
+            <view class="li-imgratio--rect">
+              <image src="{{item.imgList[0]}}" mode="aspectFill"></image>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+    <block wx:else>
+      <view class="item-detail">
+        <view class="li-title">{{item.subject}}</view>
+      </view>
+      <view class="li-info">
+        <view class="icon-user">{{item.author}}</view>
+        <view class="icon-views">{{item.views}}</view>
+      </view>
+    </block>
+  </navigator>
+</template>

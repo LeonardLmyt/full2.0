@@ -1,0 +1,105 @@
+<!-- <view class='title_name'>12-112</view> -->
+<view class="two_main" wx:for="{{footprint}}" index="index">
+  <view class="two">
+    <view class="two_right">
+      <navigator class="two_title" url="/pages/index/index_detail?tid={{item.tid}}">{{item.subject}}</navigator>
+     <view class='big_list'> 
+   <view>{{item.name}}</view>
+<view class='name_how'>
+   <image src="/images/icon_tab_personal_nor.png "></image>
+<text>{{item.author}}</text>
+</view>
+
+
+   <view class='name_pople'>
+   <image src="/images/eye.png "></image>
+<text>{{item.views}}</text>
+</view>
+     </view>
+      
+    </view>
+    <view class="two_left">
+      <image src="{{item.image[0].pic}}" mode='widthFix'></image>
+    </view>
+  <!-- </view>
+  
+</view>
+
+<view class="two_main">
+  <view class="two">
+    <view class="two_right">
+      <view class="two_title">明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙</view>
+     <view class='big_list'> 
+   <view>户外活动</view>
+<view class='name_how'>
+   <image src="/images/icon_tab_personal_nor.png  "></image>
+<text>测试人员</text>
+</view>
+
+
+   <view class='name_pople'>
+   <image src="/images/eye.png "></image>
+<text>22</text>
+</view>
+     </view>
+      
+    </view>
+    <view class="two_left">
+      <image src="/images/img_180X140_03.png " mode='widthFix'></image>
+    </view> -->
+  </view>
+  
+<!-- </view>
+<view class='title_name'>12-12</view>
+<view class="two_main">
+  <view class="two">
+    <view class="two_right">
+      <view class="two_title">明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙</view>
+     <view class='big_list'> 
+   <view>户外活动</view>
+<view class='name_how'>
+   <image src="/images/icon_tab_personal_nor.png  "></image>
+<text>测试人员</text>
+</view>
+
+
+   <view class='name_pople'>
+   <image src="/images/eye.png "></image>
+<text>22</text>
+</view>
+     </view>
+      
+    </view>
+    <view class="two_left">
+      <image src="/images/img_180X140_03.png " mode='widthFix'></image>
+    </view>
+  </view>
+  
+</view>
+
+<view class="two_main">
+  <view class="two">
+    <view class="two_right">
+      <view class="two_title">明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙明六龙</view>
+     <view class='big_list'> 
+   <view>户外活动</view>
+<view class='name_how'>
+   <image src="/images/icon_tab_personal_nor.png "></image>
+<text>测试人员</text>
+</view>
+
+
+   <view class='name_pople'>
+   <image src="/images/eye.png "></image>
+<text>22</text>
+</view>
+     </view>
+      
+    </view>
+    <view class="two_left">
+      <image src="/images/img_180X140_03.png " mode='widthFix'></image>
+    </view>
+  </view> -->
+  
+</view>
+<!-- <view class='no'>没有更多了~</view> -->

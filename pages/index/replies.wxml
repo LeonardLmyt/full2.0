@@ -1,0 +1,7 @@
+<view>
+  <textarea placeholder="回复  {{name}}" placeholder-style='placeholderclass' name="message" class="message" placeholder-style="color:#999" bindinput='addMessage' value='{{message}}' auto-focus='{{true}}'></textarea>
+  <button bindtap='bindForum' class="button-send">发送</button>
+</view>
+
+<import src="../../libs/public/public.wxml" />
+<template is="layer" data="{{layer}}" />

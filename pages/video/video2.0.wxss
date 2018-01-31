@@ -1,0 +1,27 @@
+.scroll_title{width: 100%;height: 360rpx;}
+.scroll_title image{width: 100%;height: 100%;}
+.scroll_title swiper{height: 360rpx;}
+.point_my image{width: 22rpx;height: 22rpx;}
+.point_my{display: -webkit-box;display: box;background: #FFE8DE;font-size: 22rpx;color: #FF581E;height: 40rpx;line-height: 40rpx;text-align: center;    -webkit-box-align:center;padding: 0 10rpx;border-radius: 4rpx;
+    box-align:center;margin-left: 16rpx;margin-left: 10rpx;}
+.select_content{display: -webkit-box;display: box;-webkit-box-flex: 1.0;box-flex: 1.0;font-size: 34rpx;color: #444;    
+    -webkit-box-align:center;
+    box-align:center;}
+.more image{height: 28rpx;width: 28rpx;margin-top: 7rpx;}
+.more{display: -webkit-box;display: box;font-size: 28rpx;color: #454545;}
+.select{display: -webkit-box;display: box;-webkit-box-sizing:  border-box;box-sizing:  border-box;width: 100%;height: 121rpx;border-top: 20rpx solid #f7f8fd; 
+    -webkit-box-pack:center;
+    box-pack:center;
+    -webkit-box-align:center;
+    box-align:center; 
+    padding: 0 30rpx; }
+.select_shu{width: 5rpx;height: 32rpx;background-color: #4988fd;margin-right:10rpx; }
+.select_img image{width: 338rpx;height: 200rpx;border-radius: 4rpx;}
+.select_img{box-sizing:  border-box;-webkit-box-sizing:  border-box;width: 50%;}
+.select_list{width: 100%;-webkit-box-sizing:  border-box;box-sizing:  border-box;display: -webkit-box;display: box;padding: 0 30rpx 34rpx 30rpx;}
+.select_img :nth-child(2){font-size: 30rpx;color: #444;line-height: 40rpx;
+text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;
+line-clamp: 2;
+display: box;
+box-orient: vertical; 
+-webkit-box-orient: vertical; } 

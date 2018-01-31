@@ -1,0 +1,38 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="content">
+        <view class="warning">根据相关法律要求，绑定手机号，才能进行发帖、回帖、点评等操作。</view>
+        <view class="form">
+            <view class="input_main">
+                <view class="input_main_title">手机号码</view>
+                <view class="input">
+                    <input type='number' placeholder='输入手机号码' placeholder-class='input_placeholder' maxlength='11' bindinput='addPhone' value='{{phone}}' bindfocus='check'></input>
+                    <view class="input_warning" hidden='{{phone_warning}}'>!</view>
+                </view>
+            </view>
+            <view class="input_main">
+                <view class="input_main_title">验证码</view>
+                <view class="input">
+                    <input type='number' placeholder='输入验证码' placeholder-class='input_placeholder' maxlength='6' bindinput='addValidate' value='{{validate}}' bindfocus='check'></input>
+                    <view class="input_warning" hidden='{{validate_warning}}'>!</view>
+                  
+                </view>
+                
+
+                   <view class="button {{!send.key ? 'bgbutton' : ''}}" bindtap='Send' data-key="{{send.key}}">
+                    <view wx:if="{{send.key}}">发送验证码</view>
+                    <view wx:else>{{send.time}}s</view>
+                </view>  
+            </view>
+        </view>
+        <view class='next_buttom'>
+         <button  bindgetphonenumber="getPhoneNumber" class="bloady  {{ok ? 'ok' : ''}}">绑定认证</button> 
+         <view class='huo'>
+         <view></view>
+         <view>或</view>
+         <view></view>
+         </view>
+        <button class="submit" open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber">微信快捷授权</button>
+    </view>
+    </view>
+</form>
+

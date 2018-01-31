@@ -1,0 +1,19 @@
+<view class="head_title">
+    <view class='title'>我的</view>
+    <view class='edit' bindtap='Edit'>编辑</view>
+</view>
+<view class='my_label'>
+    <view wx:for="{{my_label}}" class="my_label_sub">{{item.name}}
+        <view hidden='{{item.hidden}}' bindtap='Del' data-fid='{{item.fid}}'>×</view>
+    </view>
+</view>
+<view class="head_title">标签</view>
+<view class='all_label'>
+    <view wx:for="{{all_label}}" class="all_label_sub" bindtap="redirectTo" data-name = "{{item.name}}" data-url='/pages/bbs/bbslist?fid={{item.fid}}' data-show='{{item.hidden}}'>
+        {{item.name}}<view hidden="{{item.hidden}}" bindtap='Add' data-fid='{{item.fid}}'>＋</view>
+    </view>
+</view>
+<view style='width:100%;height:100rpx;'></view>
+<navigator url="/pages/bbs/bbs" hidden='{{buttomshow}}'><button class="submit">确定</button></navigator>
+<import src="../../libs/public/public.wxml" />
+<template is="layer" data="{{layer}}" />

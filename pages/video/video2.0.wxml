@@ -1,0 +1,46 @@
+<view class='big_warp'>
+<view class='scroll_title'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper" indicator-dots='{{true}}'>
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+</view>
+<view class='select'>
+<view class='select_content'>
+<view class='select_shu'></view>
+<view>猜你喜欢</view>
+<view class='point_my'>
+<view>点我猜更准</view>
+<image src='/images/video pages_icon_click.png '></image>
+</view>
+</view>
+<view class='more'>
+<view>更多</view>
+<image src='/images/icon_arrow_03.png'></image>
+</view>
+</view>
+<view class='select_list'>
+<view class='select_img'>
+<image src='/images/Selected_332x249_01.png '></image>
+<view>户外原始技能户外原始技能户外原始技能户外原始技能户外原始技能</view>
+</view>
+<view class='select_img'>
+<image src='/images/Selected_332x249_01.png '></image>
+<view>ssssssssss</view>
+</view>
+</view>
+<view class='select_list'>
+<view class='select_img'>
+<image src='/images/Selected_332x249_01.png '></image>
+<view>户外原始技能户外原始技能户外原始技能户外原始技能户外原始技能</view>
+</view>
+<view class='select_img'>
+<image src='/images/Selected_332x249_01.png '></image>
+<view>ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</view>
+</view>
+</view>
+
+</view>

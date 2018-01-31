@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/input",
+    "pages/my/collect",
+    "pages/my/new",
+    "pages/my/mypost",
+    "pages/my/my",
+    "pages/my/footmark",
+    "pages/video/video_detail",
+    "pages/cate/cate",
+    "pages/cate/post",
+    "pages/my/attention",
+    "pages/video/video",
+    "pages/bbs/bbs",
+    "pages/index/index_detail",
+    "pages/index/index_myname",
+    "pages/bbs/bbslist",
+    "pages/my/binding",
+    "pages/index/replies",
+    "pages/cate/addImg",
+    "pages/my/authentication",
+    "pages/cate/preview",
+    "pages/video/video2.0",
+    "pages/bbs/bbs2.0",
+    "pages/my/setup2.0"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 30000,
+    "connectSocket": 30000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
+  }
+}

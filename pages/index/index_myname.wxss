@@ -1,0 +1,105 @@
+.titie_img {
+  width: 100%;
+  height: 360rpx;
+  position: relative;
+}
+.img_bg{position: absolute;top:0;left: 0;width: 100%;
+  height: 360rpx;}
+.img_bg image{width: 100%;
+  height: 360rpx;}
+
+.head_portrait {
+  width: 168rpx;
+  height: 168rpx;
+  border-radius: 50%;
+  background: white;
+  margin: 70rpx auto 5rpx;
+  border-radius: 50% 50%;
+  -webkit-border-radius: 50% 50%;
+}
+
+.head_portrait image {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+border: 1rpx solid #ddd;
+
+}
+
+.all_content {
+  width: 100%;
+  height: auto;
+  background: white;
+}
+
+.text_name {
+  font-size: 32rpx;
+  color: #333333;
+}
+
+.hader_all {
+  position: absolute;top:0;left: 0;width: 100%;
+  height: 360rpx;
+  text-align: center;
+  overflow: hidden;
+  z-index: 100;
+}
+.big_listcontent {
+  height: 180rpx;
+  width: 100%;
+  margin-top: 123rpx;
+}
+.all_list {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  width: 90%;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto; 
+} 
+.all_list>view {
+  margin-left: 20rpx;
+  height: 150rpx;
+  display: -webkit-box; 
+  display: box;
+  -webkit-box-flex: 1.0;
+  box-flex: 1.0;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  width: 1%;
+  /* border-left: 1px solid #ccc; */
+}
+
+.all_list view:nth-child(1) {
+  margin-left: 0;
+  border-left: 0;
+}
+.all_list_sub{width: 100%;height: 100%;}
+.all_list_sub image{width: 80rpx;height: 80rpx;}
+.all_list_sub view{color: #666;font-size: 30rpx;}
+
+/*content*/
+.content{width: 100%;overflow: hidden;}
+.con_title{width: 92%;font-size: 28rpx;color: #333;margin: 34rpx auto 42rpx;font-weight: bold;}
+.content_sub{display: -webkit-box;display:box;width: 100%;overflow: hidden;}
+.content_sub_left{width: 25%;-webkit-box-pack: center;-webkit-box-align: center;text-align:-webkit-center;border-right: 1px solid #F4F4F4;}
+.time{text-align: center;color:#353535;font-size: 26rpx;margin:10rpx 0;}
+.content_sub_right{position: relative;display: -webkit-box;display:box;-webkit-box-flex: 1.0;box-flex: 1.0;padding: 0 2% 82rpx 5%;-webkit-box-orient: vertical;box-orient: vertical;}
+.content_title{color:#333333;font-size:32rpx;width: 100%;line-height: 40rpx;height:80rpx;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;display: box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;word-break: break-word;}
+.content_sub_right_img{width: 100%;overflow:hidden;margin: 12rpx 0 12rpx 0;}
+.content_sub_right_img image{width: 300rpx;height: 200rpx;}
+.content_sub_right_buttom{display: -webkit-box;display:box;-webkit-box-align: center;box-align: center;color: #999;font-size: 24rpx;}
+.content_sub_right_buttom view{width:6px;
+height:6px;
+border-radius:50%;
+-webkit-border-radius:50%;
+margin:0 15rpx;
+background-color:#999;
+}
+.content_sub_icon{position: absolute;top: 7rpx;left: -14rpx;width: 30rpx;height: 30rpx;background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAACkElEQVRIx62WTU8TURRAz7slJhKrwcKOlhhxNEBcUQwqjCsXGAiJCS418Vf4C+RPmLg1LlGJywIRE8LC8BEdS5TiSrBEaViQ9I2L94qFzptOK2c5d+47M/d93KdoQiHQChgDHgB3gH6gy4b3gSLwAXgDLPqehHHjqRiRAE+AZ1aShCLwHHjpe6ITCwuBvgK8AvIJRadZAR75nnxrKiwE+h7wGuhuU1ZjD3joe7LgFBYCfR+YA879p6zGETDle/K+QVgI9HVbivQZyWpUgGHfky/HwkKgU8AyMXNWrsBGSbO9G/Ln0Dy71Am5HsVgTrh8IVa6Aoz6nlQ77IPHLllVw9KmZq0UEp5a8OUKlCshn75XGcwqxgaEjlSkMI9Z8S+U3WcBEUu/qmFuRbOzF7u1junNKKZGhJREhouAJ8A4jn22uJlcBvDjV8jSpnaF+4FxASaiouWDkPVSclmNtVJI+cCZNyHA7ajIxk7jnCUhDE2ug1EBrkVFtnfbsDXP9YR/B/EJaku/HWJyu6SFcRIjMaMKpsU0cLGzfWH6vLMJ7QvwNSrS1+NMakrWfewHgjnSGhjIKlQbTqVgMOtMXBbgbVQkk1YM5Vo3DuUUmbQz750AC5hjp4GxASHbnVzamzHnqYMisCj2DjIb9UZKYDIv3OyLL69S5s8m885zFGDW90TXt6ePwLDr7fJByPpOSOlnyO9D8zHpTkW228xZTBkBVoFbvifV+gZ8A9O34jtb61SAvO/JZzD7EAD7YAZzLTgrjoCZmuyE0ErngWn7VWfxZ9N2zGMapti+kMfUvV1WbRnnTwci15QtwQjwFNhqQbRlc0bqy1hP001mb+B3gUlM77zKyav+FuaqPwcsuW7cNf4CvVnJFqp9c+kAAAAASUVORK5CYII=);background-size: 100% 100%;-webkit-background-size: 100% 100%;}
+
+.my_last{margin-top:105rpx;display: -webkit-box;display:box;-webkit-box-pack: center;box-pack: center;}
+.my_last image{width: 340rpx;height: 340rpx;}
+.nocontent{font-size: 32rpx;color: #999;text-align: center;}
