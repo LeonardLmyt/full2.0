@@ -90,9 +90,9 @@
     
   </swiper>
        <view class='ionic'>
-          <view>         
+          <navigator url='/pages/cate/post'>         
            <image src='/images/fl_button_Publish.png '></image>
-          </view>
+</navigator>
 <view>
           <image src='/images/fl_button_Refresh.png '></image>
           </view>

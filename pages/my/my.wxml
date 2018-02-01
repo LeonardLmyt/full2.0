@@ -24,25 +24,14 @@
         <view class='new'>我的收藏</view>
       </navigator>
     </view>
-    <!-- <view class='footmark'>
-      <navigator url='/pages/my/footmark'>
-        <image src='/images/icon_per_footprint.png'></image>
-        <view class='new'>足迹</view>
-      </navigator> 
-    </view> -->
+
     <view>
       <navigator url='/pages/my/mypost' class="all_list_sub">
         <image src='/images/icon_per_follow.png'></image>
         <view class='new'>我的帖子</view>
       </navigator>
     </view>
-    <view>
-      <navigator url='/pages/cate/post' class="all_list_sub">
-        <image src='/images/float_fatie.png'></image>
-        <view class='new'>发帖测试</view>
-      </navigator>
-    </view>    
   </view>
-</view>
+</view>     
 <import src="../../libs/public/public.wxml" />
 <template is="footer" />
