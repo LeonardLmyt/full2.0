@@ -4,55 +4,33 @@
     <view class="article-meta">
       <navigator class="article-author" url="/pages/index/index_myname?authorid={{threadList.authorid}}&author={{threadList.author}}&avatar={{threadList.avatar}}">
         <image src="{{threadList.avatar ? threadList.avatar : 'http://errorpage.b0.upaiyun.com/touxiang8264-404'}}" class="article-author--avatar" mode="aspectFill"></image>
-        <view class="article-author--name">{{threadList.author}}</view>
       </navigator>
-      <view class="article-views">{{threadList.views}}人浏览</view>
-
+      <view class="article-views">
+        <view class="icon_time">1分钟前</view>
+        <view class="icon_look">{{threadList.views}}人浏览</view>
+      </view>
+      <view class="edit">编辑</view>
     </view>
   </view>
   <view class="article-comment">
     <view class="comment-list">
       <block wx:for="{{postList}}" wx:key="">
-       <view class="comment-item" id="id{{index}}">
+        <view class="comment-item" id="id{{index}}">
           <navigator class="comment-meta" wx:if="{{item.first != 1}}" url="/pages/index/index_myname?authorid={{postList.authorid}}&author={{postList.author}}&avatar={{postList.avatar}}">
             <view class="comment-author">
               <image src="{{item.avatar}}" class="comment-author--avatar" mode="aspectFill"></image>
-              <view class="comment-author--name">{{item.author}}</view>
+              <view class="comment-author--name">{{item.author}}{{in}}</view>
+              <view class="comment_time">{{item.dateline}}</view>
             </view>
           </navigator>
           <view class="post-message">
             <rich-text nodes="{{item.message}}"></rich-text>
           </view>
-          <view class="comment-time">
-            <rich-text nodes="{{item.dateline}}"></rich-text>
-          </view>
-        </view>  
+        </view>
       </block>
     </view>
     <view class="loadmore" hidden="{{!isLoading}}">加载中...</view>
     <view class="loadmore" hidden="{{hasMore}}">已到底部，欢迎评论，转发，收藏</view>
-  </view>
-  <view class="repl-fixed">
-    <view class="place">
-      <navigator url='/pages/bbs/bbs'>
-        <view class='ture'></view>
-      </navigator>
-      <view class="place-text" bindtap="switchInput" data-show='{{true}}'>我也来说两句</view>
-      <view class="message_icon">
-        <view class="message_icon_sub">
-          <image src='/images/icon_comment_news.png'></image>
-          <view class='shu' wx:if="{{!!replies}}">
-            <text>{{replies}}</text>
-          </view>
-        </view>
-        <view class="message_icon_sub" bindtap='addCollection'>
-          <image src='{{collectionSrc[collectionSrc.show]}}'></image>
-        </view>
-        <button class="message_icon_sub" open-type="share" bindtap="onShareAppMessage">
-          <image src='/images/icon_comment_share.png'></image>
-        </button>
-      </view>
-    </view>
   </view>
   <view style="width:100%;height:120rpx;"></view>
   <view class="repl-fixed">
@@ -72,10 +50,6 @@
     </block>
     <block wx:else>
       <view class="place">
-        <navigator class="back" url='/pages/index/index'>
-          <view class='ture'></view>
-        </navigator>
-         <view class="place-text" bindtap="switchInput" data-show='{{true}}'  >我也来说两句</view> 
         <view class="message_icon">
           <view class="message_icon_sub">
             <image src='/images/icon_comment_news.png'></image>
@@ -86,19 +60,14 @@
           <view class="message_icon_sub" bindtap='addCollection'>
             <image src='{{collectionSrc[collectionSrc.show]}}'></image>
           </view>
-          <button class="message_icon_sub" open-type="share" bindtap="onShareAppMessage">
-            <image src='/images/icon_comment_share.png'></image>
-          </button>
         </view>
+        <view class="place-text" bindtap="switchInput" data-show='{{true}}'>我也来说两句</view>
       </view>
     </block>
   </view>
-<view class="post_tow"  hidden='{{isReply}}'>
-  <navigator url='/pages/index/index'>
-  <image src='/images/zhuye.png '></image>
-  </navigator>
-   <image bindtap='goTop' src='/images/float_zhiding.png'></image>
-</view> 
+  <view class="post_tow" hidden='{{isReply}}'>
+    <image bindtap='goTop' src='/images/fl_button_top.png'></image>
+  </view>
   <view class="collection {{collectionSrc.collection ? 'collection_animation' : ''}}">
     <navigator url="/pages/my/collect" class="collection_sub">
       <view class="collection_left">

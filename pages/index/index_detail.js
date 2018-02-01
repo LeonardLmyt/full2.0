@@ -98,11 +98,10 @@ Page({
 
       wx.setNavigationBarTitle({ title: thread.subject });
       for (let item in details) {
-        console.log('mmmmmmmmmmmmmmm')
-        console.log(details[item])
         details[item].message = details[item].message.replace(/^(<br \/>|<br\/>)*/, '')
         details[item].dateline = details[item].dateline.replace(/20\d{2}-/, '')
       }
+      console.log(details)
       that.setData({
         isReady: !that.data.isReady,
         threadList: thread,
@@ -144,18 +143,6 @@ Page({
       that.setData({
         hasMore: false,
       })
-    }
-  },
-  onShareAppMessage: function () {
-    return {
-      title: this.data.threadList.subject,
-      path: '/pages/detail/detail?tid=' + this.data.tid,
-    }
-  },
-  onShareAppMessage: function () {
-    return {
-      title: this.data.threadList.subject,
-      path: '/pages/detail/detail?tid=' + this.data.tid,
     }
   },
   //收藏

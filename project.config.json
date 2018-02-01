@@ -28,40 +28,10 @@
 			"current": -1,
 			"list": [
 				{
-					"id": -1,
-					"name": "身份证验证",
-					"pathName": "pages/my/authentication",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "活动",
-					"pathName": "pages/bbs/bbs",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "详情",
+					"id": 0,
+					"name": "index_detail",
 					"pathName": "pages/index/index_detail",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "评论我的",
-					"pathName": "pages/my/new",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "pages/cate/post",
-					"pathName": "pages/cate/post",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "社区",
-					"pathName": "pages/bbs/bbs",
-					"query": ""
+					"query": "tid=5463273"
 				}
 			]
 		}
