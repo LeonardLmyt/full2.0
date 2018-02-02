@@ -76,18 +76,11 @@
 </view>
  <image src='/images/course page_img_thumbnail.png '></image>
        </view>
-       
        </view>
-
-
-
-
           </view>
-     
         </scroll-view>
       </block>
     </swiper-item>
-    
   </swiper>
        <view class='ionic'>
           <navigator url='/pages/cate/post'>         

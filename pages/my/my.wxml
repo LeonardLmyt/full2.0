@@ -5,6 +5,7 @@
     </view>
     <text class='text_name'>{{nickname}}</text>
     <navigator url="/pages/my/authentication"></navigator><button class="binding" open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber">{{is_bind}}</button>
+
   </view>
   <view class="img_bg">
     <image src="/images/img_per_bg.png"></image>
@@ -15,7 +16,7 @@
     <view>
       <navigator url='/pages/my/new' open-type='navigate'  class="all_list_sub">
         <image src='/images/icon_per_news.png'></image>
-        <view class='new'>评论我的</view>
+        <view class='new'>消息通知</view>
       </navigator>
     </view>
     <view>
