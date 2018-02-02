@@ -20,7 +20,7 @@
             <view class="comment-author">
               <image src="{{item.avatar}}" class="comment-author--avatar" mode="aspectFill"></image>
               <view class="comment-author--name">{{item.author}}{{in}}</view>
-              <view class="comment_time">{{item.dateline}}</view>
+              <rich-text class="comment_time" nodes="{{item.dateline}}"></rich-text>
             </view>
           </navigator>
           <view class="post-message">
