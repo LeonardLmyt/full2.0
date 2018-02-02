@@ -139,7 +139,6 @@
 }
 
 /*content*/
-<<<<<<< HEAD
 .content{width: 100%;overflow: hidden;}
 .content_sub{display: -webkit-box;display:box;width: 100%;overflow: hidden;}
 .content_sub_left{width: 16%;-webkit-box-pack: center;-webkit-box-align: center;text-align:-webkit-center;border-right: 1px solid #F4F4F4;}
@@ -173,7 +172,6 @@ width: 100%;line-height: 40rpx;
 .footer_tab:nth-child(4) view:last-child{color:#4E74D8;}
 .number image{width: 35rpx;height: 35rpx}
 
-=======
 
 .content {
   width: 100%;
@@ -315,4 +313,3 @@ width: 100%;line-height: 40rpx;
   width: 35rpx;
   height: 35rpx;
 }
->>>>>>> 52a094c165190162de34eb164cc155f046d538ba
