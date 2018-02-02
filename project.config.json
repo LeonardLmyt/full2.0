@@ -12,6 +12,16 @@
 	"appid": "wxbf05707467d24004",
 	"projectname": "full2.0",
 	"condition": {
+		"weapp": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/my/new",
+					"pathName": "pages/my/new"
+				}
+			]
+		},
 		"search": {
 			"current": -1,
 			"list": []

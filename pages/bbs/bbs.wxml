@@ -11,93 +11,87 @@
     </scroll-view>
     <navigator class="category-view" url="../cate/cate">
       <view class="category-icon">
-      <image src='/images/Navigation bar_gengduo.png'></image>
+        <image src='/images/Navigation bar_gengduo.png'></image>
       </view>
     </navigator>
   </view>
   <swiper class="swiper" current="{{currentTab}}" style="height: {{swiperHeight}}px" bindchange="bindChange" data-id='{{currentTab}}'>
     <swiper-item wx:for="{{topTabItems}}" wx:key="" wx:for-index="tap">
       <block>
-        <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMore" scroll-top="{{!!scrollTop[tap]}}" data-fid="{{item.fid}}" hidden='{{currentTab !== tap ? true : false}}' bindscroll="scroll" bindtouchstart='touchstart' bindtouchend='touchend' style='height:{{swiperHeight}}px'>
+        <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMore" scroll-top="{{!!scrollTop[tap]}}" data-fid="{{item.fid}}" hidden='{{currentTab !== tap ? true : false}}' bindscroll="scroll" bindtouchstart='touchstart' bindtouchend='touchend'
+          style='height:{{swiperHeight}}px'>
           <view class='big_warp'>
-          <view class='select'>
-          <view></view>
-          <view>精选</view>
-          </view>
-          <view class='select_list'>
-          <view class='select_contetn' style='-webkit-box-flex: 1.0;box-flex: 1.0;'>
-          <image src='/images/course page_img_thumbnail.png '></image>
-          <view>你从未看过上海市时好时坏,</view>
-          <view></view>
-          </view>
-            <view class='select_contetn'>
-          <image src='/images/course page_img_thumbnail.png '></image>
-           <view>你从未看过上海市时好时坏,</view>
-          </view>
-          </view>
-          <view class='list'>
-          <view class='list_name'>
-          <image src='/images/interest page_img_Beauty.png'></image>
-          <view>北方的朗</view>
-          </view>
-          <view class='label'>精选</view>
-          </view>
-          <view class='big_conten'>
-          <view class='cotnet'>你从未看过上海市时好时坏你从未看过上海市时好时坏你从未看过上海市时好时坏你从未看过上海市时好时坏</view>
-          <image src='/images/course page_img_thumbnail.png '></image>
-<view class="li-info">
-<view class="icon-user">一分钟前</view>
-<view class="icon-views">60492</view>
-</view>
-          </view>
+            <view class='select'>
+              <view></view>
+              <view>精选</view>
+            </view>
+            <view class='select_list'>
+              <view class='select_contetn' style='-webkit-box-flex: 1.0;box-flex: 1.0;'>
+                <image src='/images/course page_img_thumbnail.png '></image>
+                <view>你从未看过上海市时好时坏,</view>
+                <view></view>
+              </view>
+              <view class='select_contetn'>
+                <image src='/images/course page_img_thumbnail.png '></image>
+                <view>你从未看过上海市时好时坏,</view>
+              </view>
+            </view>
             <view class='list'>
-          <view class='list_name'>
-          <image src='/images/interest page_img_Beauty.png'></image>
-          <view>北方的朗</view>
+              <view class='list_name'>
+                <image src='/images/interest page_img_Beauty.png'></image>
+                <view>北方的朗</view>
+              </view>
+              <view class='label'>精选</view>
+            </view>
+            <view class='big_conten'>
+              <view class='cotnet'>你从未看过上海市时好时坏你从未看过上海市时好时坏你从未看过上海市时好时坏你从未看过上海市时好时坏</view>
+              <image src='/images/course page_img_thumbnail.png '></image>
+              <view class="li-info">
+                <view class="icon-user">一分钟前</view>
+                <view class="icon-views">60492</view>
+              </view>
+            </view>
+            <view class='list'>
+              <view class='list_name'>
+                <image src='/images/interest page_img_Beauty.png'></image>
+                <view>北方的朗</view>
+              </view>
+            </view>
+            <view class='title_cotnen'>
+              <view class='title'>今年冬天有点冷哦-大家还晨跑吗？</view>
+              <view class="small_content">很久没有晨跑了,以前在家有时间早晨起来就跑跑，现在冬天那么冷你们还晨跑吗？</view>
+              <view class="li-info">
+                <view class="icon-user">1分钟前</view>
+                <view class="icon-views">60492</view>
+              </view>
+            </view>
+            <view class="title_cotnen">
+              <view class='title'>今年冬天有点冷哦-大家还晨跑吗？</view>
+              <view class='image_content'>
+                <view class='midden_two'>
+                  <view class='left_contetn'>很久没有晨跑？以前在家有时间早晨起来就跑跑，现在冬天那么冷你们还晨跑吗？</view>
+                  <view class="li-info">
+                    <view class="icon-user">1分钟前</view>
+                    <view class="icon-views">60492</view>
+                  </view>
+                </view>
+                <image src='/images/course page_img_thumbnail.png '></image>
+              </view>
+            </view>
           </view>
-          </view>
-          <view class='title_cotnen'>
-          <view class='title'>今年冬天有点冷哦-大家还晨跑吗？</view>
-          <view class="small_content">很久没有晨跑了,以前在家有时间早晨起来就跑跑，现在冬天那么冷你们还晨跑吗？</view>
-          <view class="li-info">
-<view class="icon-user">1分钟前</view>
-<view class="icon-views">60492</view>
-</view>
-          </view> 
-       <view class="title_cotnen">
-  <view class='title'>今年冬天有点冷哦-大家还晨跑吗？</view>
-       <view class='image_content'>
-       <view class='midden_two'>
-<view class='left_contetn'>很久没有晨跑？以前在家有时间早晨起来就跑跑，现在冬天那么冷你们还晨跑吗？</view>
-         <view class="li-info">
-<view class="icon-user">1分钟前</view>
-<view class="icon-views">60492</view>
-</view>
-</view>
- <image src='/images/course page_img_thumbnail.png '></image>
-       </view>
-       
-       </view>
-
-
-
-
-          </view>
-     
         </scroll-view>
       </block>
     </swiper-item>
-    
   </swiper>
-       <view class='ionic'>
-          <navigator url='/pages/cate/post'>         
-           <image src='/images/fl_button_Publish.png '></image>
-</navigator>
-<view>
-          <image src='/images/fl_button_Refresh.png '></image>
-          </view>
+  <view class='ionic'>
+    <navigator url='/pages/cate/post'>
+      <image src='/images/fl_button_Publish.png '></image>
+    </navigator>
+    <view>
+      <image src='/images/fl_button_Refresh.png '></image>
+    </view>
 
-          </view>
-  </block>
-  <import src="../../libs/public/public.wxml" />
+  </view>
+</block>
+<import src="../../libs/public/public.wxml" />
 <template is="footer" />

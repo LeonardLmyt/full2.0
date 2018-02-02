@@ -5,6 +5,7 @@
     </view>
     <text class='text_name'>{{nickname}}</text>
     <navigator url="/pages/my/authentication"></navigator><button class="binding" open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber">{{is_bind}}</button>
+
   </view>
   <view class="img_bg">
     <image src="/images/img_per_bg.png"></image>
