@@ -1,7 +1,5 @@
 const app = getApp()
 const util = require("../../utils/util")
-//let unionid = wx.getStorageSync('unionid')
-
 Page({
 
   /**

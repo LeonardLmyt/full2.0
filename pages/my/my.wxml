@@ -9,6 +9,7 @@
   <view class="img_bg">
     <image src="/images/img_per_bg.png"></image>
   </view>
+  <navigator url="/pages/my/setup" open-type='navigate' class="set">设置</navigator>
 </view>
 <view class='big_listcontent'>
   <view class='all_list'>

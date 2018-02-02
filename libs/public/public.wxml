@@ -3,10 +3,10 @@
   <view style='width:100%;height:100rpx;'></view>
   <view class="footer">
     <view class="footer_sub">
-      <navigator url="/pages/index/index" open-type='redirect' class="footer_tab">
+      <view bindtap='homeTap' class="footer_tab">
         <view></view>
         <view>首页</view>
-      </navigator>
+      </view>
       <navigator url="/pages/bbs/bbs" open-type='redirect' class="footer_tab">
         <view></view>
         <view>社区</view>
