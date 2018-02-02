@@ -1,8 +1,8 @@
 let app = getApp(),
   mixin = require('../../utils/mixin'),
   mx = null
-
 Page({
+  
   data: {
     list: [],
     next_page_url: 1,

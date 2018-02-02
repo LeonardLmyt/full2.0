@@ -1,10 +1,18 @@
 .content{width: 100%;overflow: hidden;}
-.content_sub{width: 100%;box-sizing: border-box;-webkit-box-sizing: border-box;padding:0 4% 0 4%;display: -webkit-box;display: box;}
+.content_sub{width: 100%;box-sizing: border-box;-webkit-box-sizing: border-box;padding:0 4% 0 1%;display: -webkit-box;display: box;}
 .content_sub_sub{width: 100%;display: -webkit-box;display: box;border-bottom: 1px solid #f2f2f2}
-.content_sub_l{width: 44rpx;overflow:hidden;margin-right: 24rpx;}
+.content_sub_l{width: 44rpx;overflow:hidden;margin-right: 24rpx;position: relative}
 .content_sub_r{display: -webkit-box;display: box;-webkit-box-flex: 1.0;box-flex: 1.0;padding-bottom: 5rpx;}
 .content_sub_l image{width: 44rpx;height: 44rpx;border-radius: 50% 50%;-webkit-border-radius: 50% 50%;margin-top: 43rpx;}
 .content_sub_c{display: -webkit-box;display: box;-webkit-box-flex: 1.0;box-flex: 1.0;-webkit-box-orient: vertical;box-orient: vertical;border-bottom:1rpx solid #f2f2f2;padding: 24rpx 0;
+}
+.postition{
+  position: absolute;top:10rpx;
+left:26rpx;
+border-radius: 50%;
+background:red;
+padding:5rpx;
+font-size: 20rpx;
 }
 .sc_t{font-size:28rpx;color:#333;-webkit-box-flex: 1.0;box-flex: 1.0;}
 .sc_t text{color: #bbbbbb;}

@@ -9,7 +9,7 @@
         <view class="content_sub" >
             <view class="content_sub_l">
                 <image src="/images/Message page_icon_Collection.png "></image>
-                <view class=''>1</view>
+                <view class='postition'>1</view>
             </view>
             <view class="content_sub_r">
                 <view class="content_sub_c">
