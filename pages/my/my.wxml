@@ -16,7 +16,7 @@
     <view>
       <navigator url='/pages/my/new' open-type='navigate'  class="all_list_sub">
         <image src='/images/icon_per_news.png'></image>
-        <view class='new'>评论我的</view>
+        <view class='new'>消息通知</view>
       </navigator>
     </view>
     <view>
