@@ -22,7 +22,7 @@
     "pages/my/authentication",
     "pages/cate/preview",
     "pages/video/video2.0",
-    "pages/my/setup2.0"
+    "pages/my/setup"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,40 @@
+<view class="head">
+  <view class="head_img_main">
+    <view class="head_img_sub">
+      <image class="head_img" src='http://avatar.8264.com/data/avatar/037/03/18/57_avatar_middle.jpg'></image>
+      <image class="img_edit" src="/images/icon_camera.png"></image>
+    </view>
+    <view class="head_message">头像会用作公开资料</view>
+  </view>
+</view>
+
+<view class="content">
+  <view class="con_sub">
+    <view>UID: 40489176</view>
+    <view class="con_sub_c grad">绑定手机</view>
+    <view class="con_sub_r"></view>
+  </view>
+  <view class="con_sub">
+    <view>昵称</view>
+    <view class="con_sub_c">帝江</view>
+    <view class="con_sub_r"></view>
+  </view>
+  <view class="con_sub">
+    <view>性别</view>
+    <view class="con_sub_c">男</view>
+    <view class="con_sub_r"></view>
+  </view>
+  <view class="con_sub">
+    <view>年龄</view>
+    <view class="con_sub_c">80后</view>
+    <view class="con_sub_r"></view>
+  </view>
+  <view class="con_sub">
+    <view>兴趣</view>
+    <view class="con_sub_c">
+      <view class="label">登山</view>
+      <view class="label">徒步</view>
+    </view>
+    <view class="con_sub_r"></view>
+  </view>
+</view>
