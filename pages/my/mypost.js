@@ -35,7 +35,7 @@ Page({
       header: { 'Accept': 'application/json' },
       success: function (res) {
         mx.close()
-        that.setData({
+        that.setData({ 
           record: !res.data.myList.data ? [] : res.data.myList.data,
           next_page_url:res.data.myList.next_page_url,
           recordshow:false

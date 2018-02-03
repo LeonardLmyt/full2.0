@@ -31,7 +31,7 @@
         <image src='/images/icon_per_follow.png'></image>
         <view class='new'>我的帖子</view>
       </navigator>
-    </view>
+    </view> 
   </view>
 </view>     
 <import src="../../libs/public/public.wxml" />
